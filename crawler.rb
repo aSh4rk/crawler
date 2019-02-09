@@ -1,45 +1,45 @@
 class Cell
 
-	def initialize
-		@viewables = []
-	end
+  def initialize
+    @viewables = []
+  end
 
-	def getCoords
-	end
+  def getCoords
+  end
 
-	def is_empty?
-		@viewables.empty?
-	end
+  def is_empty?
+    @viewables.empty?
+  end
 
-	def render
-		if is_empty?
-			" "
-		else	
-			@viewables.last.render
-		end
-	end
+  def render
+    if is_empty?
+      " "
+    else  
+      @viewables.last.render
+    end
+  end
 
-	def put(viewable)
-		@viewables.push(viewable)
-	end
+  def put(viewable)
+    @viewables.push(viewable)
+  end
 end
 
 class Floor
-	def render
-		"•"
-	end
+  def render
+    "•"
+  end
 end
 
 class VWall
-	def render
-		"‖"
-	end
+  def render
+    "‖"
+  end
 end
 
 class HWall
-	def render
-		"═"
-	end
+  def render
+    "═"
+  end
 end
 
 empty_cell = Cell.new
